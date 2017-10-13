@@ -7,17 +7,26 @@
   <make>pureliquid.file_source($file_name, $repeat, $period_ms)</make>
  <param>
     <name>File Name</name>
-    <key>$file_name</key>
+    <key>file_name</key>
     <type>string</type>
   </param>
- <param>
+  <param>
     <name>Repeat</name>
-    <key>$repeat</key>
-    <type>bool</type>
+    <key>repeat</key>
+    <value>True</value>
+    <type>enum</type>
+    <option>
+      <name>Yes</name>
+      <key>True</key>
+    </option>
+    <option>
+      <name>No</name>
+    <key>False</key>
+    </option>
   </param>
- <param>
+  <param>
     <name>Repetition Period (ms)</name>
-    <key>$period_ms</key>
+    <key>period_ms</key>
     <type>int</type>
   </param>
  <source>
