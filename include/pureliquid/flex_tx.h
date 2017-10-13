@@ -23,7 +23,7 @@
 #define INCLUDED_PURELIQUID_FLEX_TX_H
 
 #include <pureliquid/api.h>
-#include <gnuradio/block.h>
+#include <gnuradio/sync_block.h>
 
 namespace gr {
   namespace pureliquid {
@@ -33,7 +33,7 @@ namespace gr {
      * \ingroup pureliquid
      *
      */
-    class PURELIQUID_API flex_tx : virtual public gr::block
+    class PURELIQUID_API flex_tx : virtual public gr::sync_block
     {
      public:
       typedef boost::shared_ptr<flex_tx> sptr;

@@ -55,7 +55,7 @@ namespace gr {
          gr_vector_void_star &output_items);
     };
 
-  } // namespace pureliquid
+  } // namespace liquiddsp
 } // namespace gr
 
 #endif /* INCLUDED_PURELIQUID_FLEX_TX_IMPL_H */

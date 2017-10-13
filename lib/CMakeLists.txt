@@ -24,10 +24,8 @@ include(GrPlatform) #define LIB_SUFFIX
 
 include_directories(${Boost_INCLUDE_DIR})
 link_directories(${Boost_LIBRARY_DIRS})
-
 list(APPEND pureliquid_sources
-    flex_tx_impl.cc
-)
+    flex_tx_impl.cc )
 
 set(pureliquid_sources "${pureliquid_sources}" PARENT_SCOPE)
 if(NOT pureliquid_sources)
@@ -57,12 +55,10 @@ GR_LIBRARY_FOO(gnuradio-pureliquid RUNTIME_COMPONENT "pureliquid_runtime" DEVEL_
 include(GrTest)
 
 include_directories(${CPPUNIT_INCLUDE_DIRS})
-
 list(APPEND test_pureliquid_sources
     ${CMAKE_CURRENT_SOURCE_DIR}/test_pureliquid.cc
     ${CMAKE_CURRENT_SOURCE_DIR}/qa_pureliquid.cc
-    ${CMAKE_CURRENT_SOURCE_DIR}/qa_flex_tx.cc
-)
+    )
 
 add_executable(test-pureliquid ${test_pureliquid_sources})
 

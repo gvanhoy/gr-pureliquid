@@ -26,13 +26,11 @@
  */
 
 #include "qa_pureliquid.h"
-#include "qa_flex_tx.h"
 
 CppUnit::TestSuite *
 qa_pureliquid::suite()
 {
   CppUnit::TestSuite *s = new CppUnit::TestSuite("pureliquid");
-  s->addTest(gr::pureliquid::qa_flex_tx::suite());
 
   return s;
 }
