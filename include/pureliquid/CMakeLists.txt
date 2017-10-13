@@ -22,5 +22,6 @@
 ########################################################################
 install(FILES
     api.h
-    flex_tx.h DESTINATION include/pureliquid
+    flex_tx.h
+    flex_rx.h DESTINATION include/pureliquid
 )
