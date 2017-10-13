@@ -46,7 +46,7 @@ namespace gr {
        * class. pureliquid::file_source::make is the public interface for
        * creating new instances.
        */
-      static sptr make(std::string fileName, bool repeat, unsigned int period_ms);
+      static sptr make(std::string file_name, bool repeat, unsigned int period_ms);
     };
 
   } // namespace pureliquid
