@@ -56,7 +56,11 @@ namespace gr {
         std::ostringstream file_contents;
         file_contents << input_file_stream.rdbuf();
 
-        pmt::pmt_t vec_contents = pmt::deserialize_str(file_contents.str());
+        std::string temp_string = file_contents.str();
+
+        std::vector<uint8_t> buffer;
+        buffer.insert(buffer.begin(), temp_string.begin(), temp_string.end());
+        pmt::pmt_t vec_contents = pmt::init_u8vector(buffer.size(), buffer);
         pmt::pmt_t d_msg(pmt::cons(pmt::PMT_NIL, vec_contents));
 
         message_port_register_out(PDU_PORT_ID);
