@@ -8,6 +8,9 @@
 %include "pureliquid_swig_doc.i"
 
 %{
+#include "pureliquid/file_source.h"
 %}
 
 
+%include "pureliquid/file_source.h"
+GR_SWIG_BLOCK_MAGIC2(pureliquid, file_source);
