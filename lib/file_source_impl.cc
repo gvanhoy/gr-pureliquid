@@ -43,7 +43,7 @@ namespace gr {
      * The private constructor
      */
     file_source_impl::file_source_impl(std::string file_name, bool repeat, unsigned int period_ms)
-      : gr::block("file_source",
+      : gr::sync_block("file_source",
               gr::io_signature::make(0, 0, 0),
               gr::io_signature::make(0, 0, 0)),
               d_file_name(file_name),
