@@ -23,5 +23,5 @@
 install(FILES
     api.h
     file_source.h
-    file_sink.h DESTINATION include/pureliquid
+    DESTINATION include/pureliquid
 )
