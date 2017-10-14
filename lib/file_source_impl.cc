@@ -78,8 +78,7 @@ namespace gr {
     bool
     file_source_impl::start()
     {
-        std::cout << "Started new thread" << std::endl;
-      d_thread = boost::shared_ptr<gr::thread::thread>
+        d_thread = boost::shared_ptr<gr::thread::thread>
         (new gr::thread::thread(boost::bind(&file_source_impl::run, this)));
 
       return block::start();
@@ -98,6 +97,7 @@ namespace gr {
     {
         if(d_repeat){
             while(true) {
+                std::cout << "Sending new message" << std::endl;
                 boost::this_thread::sleep(boost::posix_time::milliseconds(d_period_ms));
                 message_port_pub(PDU_PORT_ID, d_msg);
             }
