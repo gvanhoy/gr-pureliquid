@@ -58,10 +58,10 @@ namespace gr {
         d_header = (unsigned char *) malloc(14*sizeof(unsigned char));
         memset(d_header, 0, 14);
         message_port_register_in(PDU_PORT_ID);
-        set_msg_handler(PDU_PORT_ID, boost::bind(&flex_tx_impl::send_pkt, this, _1));
+        set_msg_handler(PDU_PORT_ID, boost::bind(&pure_flex_tx_impl::send_pkt, this, _1));
 
         message_port_register_in(pmt::mp("configuration"));
-        set_msg_handler(pmt::mp("configuration"), boost::bind(&flex_tx_impl::configure, this, _1));
+        set_msg_handler(pmt::mp("configuration"), boost::bind(&pure_flex_tx_impl::configure, this, _1));
     }
 
     /*
