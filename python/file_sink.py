@@ -21,6 +21,7 @@
 
 import numpy
 from gnuradio import gr
+import pmt
 
 class file_sink(gr.basic_block):
     """
