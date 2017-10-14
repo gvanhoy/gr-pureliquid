@@ -37,6 +37,7 @@ class file_sink(gr.basic_block):
         self.file = open(file_name, "w")
 
     def handler(self, pdu):
+        print "Got data: ", pdu
         data = pmt.to_python(pmt.cdr(pdu))
         self.file.write(data)
         self.file.write("\n")
