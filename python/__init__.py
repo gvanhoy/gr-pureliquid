@@ -31,4 +31,6 @@ except ImportError:
 	pass
 
 # import any pure python here
+from file_sink import file_sink
+
 #

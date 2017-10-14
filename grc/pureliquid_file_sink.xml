@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<block>
+  <name>file_sink</name>
+  <key>pureliquid_file_sink</key>
+  <category>[pureliquid]</category>
+  <import>import pureliquid</import>
+  <make>pureliquid.file_sink($file_name)</make>
+ <param>
+    <name>File Name</name>
+    <key>file_name</key>
+    <type>string</type>
+  </param>
+
+  <sink>
+    <name>pdus</name>
+    <type></type>
+  </sink>
+</block>
