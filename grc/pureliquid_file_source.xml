@@ -30,7 +30,7 @@
     <type>int</type>
   </param>
  <source>
-    <name>pdu</name>
+    <name>pdus</name>
     <type>message</type>
   </source>
 </block>
