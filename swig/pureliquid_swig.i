@@ -8,9 +8,6 @@
 %include "pureliquid_swig_doc.i"
 
 %{
-#include "pureliquid/flex_rx.h"
 %}
 
-%include "pureliquid/flex_rx.h"
-GR_SWIG_BLOCK_MAGIC2(pureliquid, flex_rx);
 

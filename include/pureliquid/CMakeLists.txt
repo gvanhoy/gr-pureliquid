@@ -22,6 +22,5 @@
 ########################################################################
 install(FILES
     api.h
-    flex_rx.h
     DESTINATION include/pureliquid
 )
