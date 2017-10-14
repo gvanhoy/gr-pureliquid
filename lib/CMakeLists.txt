@@ -26,7 +26,7 @@ include_directories(${Boost_INCLUDE_DIR})
 link_directories(${Boost_LIBRARY_DIRS})
 list(APPEND pureliquid_sources
     file_source_impl.cc
-    pure_flex_tx_impl.cc )
+    )
 
 set(pureliquid_sources "${pureliquid_sources}" PARENT_SCOPE)
 if(NOT pureliquid_sources)

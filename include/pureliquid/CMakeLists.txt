@@ -23,5 +23,5 @@
 install(FILES
     api.h
     file_source.h
-    pure_flex_tx.h DESTINATION include/pureliquid
+    DESTINATION include/pureliquid
 )
