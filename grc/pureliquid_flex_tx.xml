@@ -5,33 +5,34 @@
   <category>[pureliquid]</category>
   <import>import pureliquid</import>
   <make>pureliquid.flex_tx($modulation, $inner_code, $outer_code)</make>
+  <!-- Make one 'param' node for every Parameter you want settable from the GUI.
+       Sub-nodes:
+       * name
+       * key (makes the value accessible as $keyname, e.g. in the make node)
+       * type -->
   <param>
-   <name>Modulation</name>
-    <key>modulation</key>
-    <type>int</type>
-  </param>
-  <param>
-   <name>Inner Code</name>
-    <key>inner_code</key>
-    <type>int</type>
-  </param>
-  <param>
-   <name>Outer Code</name>
-    <key>outer_code</key>
-    <type>int</type>
+    <name>...</name>
+    <key>...</key>
+    <type>...</type>
   </param>
 
- <sink>
-    <name>pdus</name>
-    <type>message</type>
+  <!-- Make one 'sink' node per input. Sub-nodes:
+       * name (an identifier for the GUI)
+       * type
+       * vlen
+       * optional (set to 1 for optional inputs) -->
+  <sink>
+    <name>in</name>
+    <type><!-- e.g. int, float, complex, byte, short, xxx_vector, ...--></type>
   </sink>
- <sink>
-    <name>configuration</name>
-    <type>message</type>
-    <optional>1</optional>
-  </sink>
- <source>
-    <name>pdus</name>
-    <type>message</type>
+
+  <!-- Make one 'source' node per output. Sub-nodes:
+       * name (an identifier for the GUI)
+       * type
+       * vlen
+       * optional (set to 1 for optional inputs) -->
+  <source>
+    <name>out</name>
+    <type><!-- e.g. int, float, complex, byte, short, xxx_vector, ...--></type>
   </source>
 </block>
