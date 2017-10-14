@@ -23,7 +23,7 @@ from gnuradio import gr, gr_unittest
 from gnuradio import blocks
 import pureliquid_swig as pureliquid
 
-class qa_flex_tx (gr_unittest.TestCase):
+class qa_pure_flex_tx (gr_unittest.TestCase):
 
     def setUp (self):
         self.tb = gr.top_block ()
@@ -38,4 +38,4 @@ class qa_flex_tx (gr_unittest.TestCase):
 
 
 if __name__ == '__main__':
-    gr_unittest.run(qa_flex_tx, "qa_flex_tx.xml")
+    gr_unittest.run(qa_pure_flex_tx, "qa_pure_flex_tx.xml")
