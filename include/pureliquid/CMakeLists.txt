@@ -22,5 +22,5 @@
 ########################################################################
 install(FILES
     api.h
-    file_source.h DESTINATION include/pureliquid
+    DESTINATION include/pureliquid
 )
