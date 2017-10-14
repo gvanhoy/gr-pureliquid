@@ -61,7 +61,7 @@ namespace gr {
 
     void file_sink_impl::write_contents(pmt::pmt_t payload_data){
         pmt::pmt_t bytes = pmt::cdr(payload_data);
-        d_output_stream << bytes;
+        d_output_stream << pmt::serialize_str(bytes);
     }
 
     int
