@@ -76,6 +76,7 @@ namespace gr {
     bool
     file_source_impl::start()
     {
+        std::cout << "Started new thread" << std::endl;
       d_thread = boost::shared_ptr<gr::thread::thread>
         (new gr::thread::thread(boost::bind(&file_source_impl::run, this)));
 
@@ -93,6 +94,7 @@ namespace gr {
 
     void file_source_impl::run()
     {
+        std::cout << "Running with repeat " << d_repeat << std::endl;
         if(d_repeat){
             while(true) {
                 boost::this_thread::sleep(boost::posix_time::milliseconds(d_period_ms));
