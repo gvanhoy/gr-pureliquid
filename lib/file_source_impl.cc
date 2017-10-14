@@ -63,6 +63,8 @@ namespace gr {
         pmt::pmt_t vec_contents = pmt::init_u8vector(buffer.size(), buffer);
         pmt::pmt_t d_msg(pmt::cons(pmt::PMT_NIL, vec_contents));
 
+        std::cout << "Constructed pdu: " << d_msg << std::endl;
+
         message_port_register_out(PDU_PORT_ID);
     }
 
@@ -94,7 +96,6 @@ namespace gr {
 
     void file_source_impl::run()
     {
-        std::cout << "Running with repeat " << d_repeat << std::endl;
         if(d_repeat){
             while(true) {
                 boost::this_thread::sleep(boost::posix_time::milliseconds(d_period_ms));
