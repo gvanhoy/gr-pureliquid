@@ -61,7 +61,7 @@ namespace gr {
         std::vector<uint8_t> buffer;
         buffer.insert(buffer.begin(), temp_string.begin(), temp_string.end());
         pmt::pmt_t vec_contents = pmt::init_u8vector(buffer.size(), buffer);
-        pmt::pmt_t d_msg(pmt::cons(pmt::PMT_NIL, vec_contents));
+        d_msg = pmt::cons(pmt::PMT_NIL, vec_contents);
 
         std::cout << "Constructed pdu: " << d_msg << std::endl;
 
