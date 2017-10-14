@@ -69,6 +69,7 @@ target_link_libraries(
   ${Boost_LIBRARIES}
   ${CPPUNIT_LIBRARIES}
   gnuradio-pureliquid
+  liquid
 )
 
 GR_ADD_TEST(test_pureliquid test-pureliquid)
