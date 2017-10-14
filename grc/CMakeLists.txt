@@ -17,5 +17,6 @@
 # the Free Software Foundation, Inc., 51 Franklin Street,
 # Boston, MA 02110-1301, USA.
 install(FILES
-    pureliquid_file_source.xml DESTINATION share/gnuradio/grc/blocks
+    pureliquid_file_source.xml
+    pureliquid_file_sink.xml DESTINATION share/gnuradio/grc/blocks
 )

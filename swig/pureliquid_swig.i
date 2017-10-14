@@ -9,7 +9,10 @@
 
 %{
 #include "pureliquid/file_source.h"
+#include "pureliquid/file_sink.h"
 %}
 
 %include "pureliquid/file_source.h"
 GR_SWIG_BLOCK_MAGIC2(pureliquid, file_source);
+%include "pureliquid/file_sink.h"
+GR_SWIG_BLOCK_MAGIC2(pureliquid, file_sink);

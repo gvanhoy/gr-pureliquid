@@ -64,7 +64,7 @@ namespace gr {
         d_msg = pmt::cons(pmt::PMT_NIL, vec_contents);
 
         message_port_register_out(PDU_PORT_ID);
-    }c
+    }
 
     /*
      * Our virtual destructor.
