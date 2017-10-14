@@ -63,10 +63,8 @@ namespace gr {
         pmt::pmt_t vec_contents = pmt::init_u8vector(buffer.size(), buffer);
         d_msg = pmt::cons(pmt::PMT_NIL, vec_contents);
 
-        std::cout << "Constructed pdu: " << d_msg << std::endl;
-
         message_port_register_out(PDU_PORT_ID);
-    }
+    }c
 
     /*
      * Our virtual destructor.
@@ -97,7 +95,6 @@ namespace gr {
     {
         if(d_repeat){
             while(true) {
-                std::cout << "Sending new message" << std::endl;
                 boost::this_thread::sleep(boost::posix_time::milliseconds(d_period_ms));
                 message_port_pub(PDU_PORT_ID, d_msg);
             }
