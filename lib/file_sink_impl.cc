@@ -44,7 +44,7 @@ namespace gr {
               gr::io_signature::make(0, 0, 0)),
               d_file_name(file_name)
     {
-        std::ofstream d_output_stream(d_file_name.c_str(), std::fstream::out);
+        std::ofstream d_output_stream(d_file_name.c_str(), std::fstream::app);
         if(!d_output_stream.is_open()) std::cout << "Could not open " << d_file_name << std::endl;
 
         message_port_register_in(pmt::mp("pdus"));
@@ -61,8 +61,6 @@ namespace gr {
 
     void file_sink_impl::write_contents(pmt::pmt_t payload_data){
         pmt::pmt_t bytes = pmt::cdr(payload_data);
-
-        std::cout << "Got payload " << payload_data << " bytes " << bytes << std::endl;
         d_output_stream << bytes;
     }
 
