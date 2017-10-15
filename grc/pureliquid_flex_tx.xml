@@ -2,7 +2,7 @@
 <block>
   <name>flex_tx</name>
   <key>pureliquid_flex_tx</key>
-  <category>pureliquid</category>
+  <category>[pureliquid]</category>
   <import>import pureliquid</import>
   <make>pureliquid.flex_tx($modulation, $inner_code, $outer_code)</make>
   <param>

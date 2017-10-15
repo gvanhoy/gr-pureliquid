@@ -19,5 +19,6 @@
 install(FILES
     pureliquid_file_source.xml
     pureliquid_file_sink.xml
-    pureliquid_flex_tx.xml DESTINATION share/gnuradio/grc/blocks
+    pureliquid_flex_tx.xml
+    pureliquid_flex_rx.xml DESTINATION share/gnuradio/grc/blocks
 )
