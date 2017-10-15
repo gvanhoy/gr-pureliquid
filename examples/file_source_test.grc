@@ -223,96 +223,6 @@
     </param>
   </block>
   <block>
-    <key>liquiddsp_flex_rx</key>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(752, 56)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>liquiddsp_flex_rx_0</value>
-    </param>
-    <param>
-      <key>maxoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>minoutbuf</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>liquiddsp_flex_tx</key>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(256, 100)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>liquiddsp_flex_tx_0</value>
-    </param>
-    <param>
-      <key>inner_code</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>maxoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>minoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>modulation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>outer_code</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
     <key>pureliquid_file_sink</key>
     <param>
       <key>alias</key>
@@ -336,7 +246,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(912, 84)</value>
+      <value>(904, 116)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -355,7 +265,9 @@
     </param>
     <param>
       <key>comment</key>
-      <value></value>
+      <value>Stores a whole file into a buffer. 
+Sends a message with the files entire
+contents periodically.</value>
     </param>
     <param>
       <key>affinity</key>
@@ -399,6 +311,96 @@
     </param>
   </block>
   <block>
+    <key>pureliquid_flex_rx</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(776, 56)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>pureliquid_flex_rx_0</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>pureliquid_flex_tx</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(272, 100)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>pureliquid_flex_tx_0</value>
+    </param>
+    <param>
+      <key>inner_code</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>modulation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>outer_code</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
     <key>qtgui_const_sink_x</key>
     <param>
       <key>autoscale</key>
@@ -426,7 +428,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(888, 300)</value>
+      <value>(904, 52)</value>
     </param>
     <param>
       <key>gui_hint</key>
@@ -747,7 +749,7 @@
   </block>
   <connection>
     <source_block_id>blocks_throttle_0</source_block_id>
-    <sink_block_id>liquiddsp_flex_rx_0</sink_block_id>
+    <sink_block_id>pureliquid_flex_rx_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
@@ -758,27 +760,27 @@
     <sink_key>0</sink_key>
   </connection>
   <connection>
-    <source_block_id>liquiddsp_flex_rx_0</source_block_id>
+    <source_block_id>pureliquid_file_source_0</source_block_id>
+    <sink_block_id>pureliquid_flex_tx_0</sink_block_id>
+    <source_key>pdus</source_key>
+    <sink_key>pdus</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>pureliquid_flex_rx_0</source_block_id>
     <sink_block_id>qtgui_const_sink_x_0</sink_block_id>
     <source_key>constellation</source_key>
     <sink_key>in</sink_key>
   </connection>
   <connection>
-    <source_block_id>liquiddsp_flex_rx_0</source_block_id>
+    <source_block_id>pureliquid_flex_rx_0</source_block_id>
     <sink_block_id>pureliquid_file_sink_0</sink_block_id>
     <source_key>payload_data</source_key>
     <sink_key>pdus</sink_key>
   </connection>
   <connection>
-    <source_block_id>liquiddsp_flex_tx_0</source_block_id>
+    <source_block_id>pureliquid_flex_tx_0</source_block_id>
     <sink_block_id>es_source_0</sink_block_id>
     <source_key>pdus</source_key>
     <sink_key>schedule_event</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>pureliquid_file_source_0</source_block_id>
-    <sink_block_id>liquiddsp_flex_tx_0</sink_block_id>
-    <source_key>pdus</source_key>
-    <sink_key>pdus</sink_key>
   </connection>
 </flow_graph>
