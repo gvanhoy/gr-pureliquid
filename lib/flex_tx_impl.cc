@@ -23,6 +23,7 @@
 #endif
 
 #include <gnuradio/io_signature.h>
+#include <gnuradio/blocks/pdu.h>
 #include "flex_tx_impl.h"
 
 namespace gr {
