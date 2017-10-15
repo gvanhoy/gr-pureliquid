@@ -26,7 +26,7 @@ include_directories(${Boost_INCLUDE_DIR})
 link_directories(${Boost_LIBRARY_DIRS})
 list(APPEND pureliquid_sources
     file_source_impl.cc
-    )
+    flex_tx_impl.cc )
 
 set(pureliquid_sources "${pureliquid_sources}" PARENT_SCOPE)
 if(NOT pureliquid_sources)
@@ -35,7 +35,7 @@ if(NOT pureliquid_sources)
 endif(NOT pureliquid_sources)
 
 add_library(gnuradio-pureliquid SHARED ${pureliquid_sources})
-target_link_libraries(gnuradio-pureliquid ${Boost_LIBRARIES} ${GNURADIO_ALL_LIBRARIES})
+target_link_libraries(gnuradio-pureliquid ${Boost_LIBRARIES} ${GNURADIO_ALL_LIBRARIES} liquid)
 set_target_properties(gnuradio-pureliquid PROPERTIES DEFINE_SYMBOL "gnuradio_pureliquid_EXPORTS")
 
 if(APPLE)

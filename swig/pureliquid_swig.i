@@ -9,8 +9,11 @@
 
 %{
 #include "pureliquid/file_source.h"
+#include "pureliquid/flex_tx.h"
 %}
 
 %include "pureliquid/file_source.h"
 GR_SWIG_BLOCK_MAGIC2(pureliquid, file_source);
 
+%include "pureliquid/flex_tx.h"
+GR_SWIG_BLOCK_MAGIC2(pureliquid, flex_tx);
