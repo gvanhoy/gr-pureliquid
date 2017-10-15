@@ -30,13 +30,24 @@ namespace gr {
     class flex_tx_impl : public flex_tx
     {
      private:
+         unsigned int           d_modulation;
+         unsigned int           d_inner_code;
+         unsigned int           d_outer_code;
+         unsigned char *        d_header;
+         unsigned char *        d_payload;
          flexframegenprops_s    d_fgprops;
          flexframegen           d_fg;
+         unsigned long int      d_num_frames;
 
      public:
       flex_tx_impl(unsigned int modulation, unsigned int inner_code, unsigned int outer_code);
       ~flex_tx_impl();
+      void send_pkt(pmt::pmt_t pdu);
+      void configure(pmt::pmt_t configuration);
 
+      void set_modulation(unsigned int modulation);
+      void set_inner_code(unsigned int inner_code);
+      void set_outer_code(unsigned int outer_code);
       // Where all the action really happens
       int work(int noutput_items,
          gr_vector_const_void_star &input_items,
