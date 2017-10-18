@@ -21,18 +21,117 @@
       <name>8-PSK</name>
       <key>2</key>
     </option>
+    <option>
+      <name>16-PSK</name>
+      <key>3</key>
+    </option>
+     <option>
+      <name>DBPSK</name>
+      <key>4</key>
+    </option>
+     <option>
+      <name>DQPSK</name>
+      <key>5</key>
+    </option>
+     <option>
+      <name>4-ASK</name>
+      <key>6</key>
+    </option>
+     <option>
+      <name>16-QAM</name>
+      <key>7</key>
+    </option>
+     <option>
+      <name>32-QAM</name>
+      <key>8</key>
+    </option>
+     <option>
+      <name>64-QAM</name>
+      <key>9</key>
+    </option>
   </param>
   <param>
    <name>Inner Code</name>
     <key>inner_code</key>
-    <type>int</type>
+    <type>enum</type>
+    <option>
+      <name>None</name>
+      <key>0</key>
+    </option>
+     <option>
+      <name>Conv Rate 1/2</name>
+      <key>1</key>
+    </option>
+     <option>
+      <name>Conv Rate 2/3</name>
+      <key>2</key>
+    </option>
+     <option>
+      <name>Conv Rate 3/4</name>
+      <key>3</key>
+    </option>
+     <option>
+      <name>Conv Rate 4/5</name>
+      <key>4</key>
+    </option>
+     <option>
+      <name>Conv Rate 5/6</name>
+      <key>5</key>
+    </option>
+     <option>
+      <name>Conv Rate 6/7</name>
+      <key>6</key>
+    </option>
+     <option>
+      <name>Conv Rate 7/8</name>
+      <key>8</key>
+    </option>
   </param>
   <param>
    <name>Outer Code</name>
     <key>outer_code</key>
-    <type>int</type>
+    <type>enum</type>
+    <option>
+      <name>NONE</name>
+      <key>0</key>
+    </option>
+     <option>
+      <name>Golay k/n = 12/24</name>
+      <key>1</key>
+    </option>
+     <option>
+      <name>Reed-Solomon k/n = 4/8</name>
+      <key>2</key>
+    </option>
+     <option>
+      <name>Hamming k/n = 4/7</name>
+      <key>3</key>
+    </option>
+     <option>
+      <name>Hamming k/n = 8/12</name>
+      <key>4</key>
+    </option>
+     <option>
+      <name>Hamming k/n = 16/22</name>
+      <key>5</key>
+    </option>
+     <option>
+      <name>Hamming k/n = 32/39</name>
+      <key>6</key>
+    </option>
+     <option>
+      <name>SECDED k/n = 16/22</name>
+      <key>7</key>
+    </option>
+     <option>
+      <name>SECDED k/n = 32/39</name>
+      <key>8</key>
+    </option>
+     <option>
+      <name>SECDED k/n = 64/72</name>
+      <key>9</key>
+    </option>
   </param>
-
  <sink>
     <name>pdus</name>
     <type>message</type>
