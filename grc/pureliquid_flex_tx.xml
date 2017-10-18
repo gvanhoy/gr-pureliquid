@@ -8,7 +8,19 @@
   <param>
    <name>Modulation</name>
     <key>modulation</key>
-    <type>int</type>
+    <type>enum</type>
+    <option>
+      <name>BPSK</name>
+      <key>0</key>
+    </option>
+    <option>
+      <name>QPSK</name>
+      <key>1</key>
+    </option>
+    <option>
+      <name>8-PSK</name>
+      <key>2</key>
+    </option>
   </param>
   <param>
    <name>Inner Code</name>
