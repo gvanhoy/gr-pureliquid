@@ -8,7 +8,7 @@
  <param>
     <name>File Name</name>
     <key>file_name</key>
-    <type>string</type>
+    <type>file_open</type>
   </param>
   <param>
     <name>Repeat</name>
