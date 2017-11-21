@@ -22,7 +22,7 @@
 #define INCLUDED_PURELIQUID_DETECTOR_CC_IMPL_H
 
 #include <pureliquid/detector_cc.h>
-#include <liquid.h>
+#include <liquid/liquid.h>
 
 namespace gr {
   namespace pureliquid {
