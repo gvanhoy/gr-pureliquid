@@ -60,12 +60,12 @@ namespace gr {
         gr_vector_const_void_star &input_items,
         gr_vector_void_star &output_items)
     {
-      const gr_complex *in = (const gr_complex *) input_items[0];
+      gr_complex *in = (gr_complex *) input_items[0];
       gr_complex *out = (gr_complex *) output_items[0];
       gr_complex *sample;
 
       for(unsigned int i = 0; i < noutput_items; i++){
-        sample = qdetector_cccf_execute(d_detector, in + i);
+        sample = qdetector_cccf_execute(d_detector, in[i]);
         out[i] = in[i];
         if(sample != NULL){
             std::cout << "Detected packet!" << std::endl;
@@ -73,6 +73,7 @@ namespace gr {
             std::cout << "Gamma: " << qdetector_cccf_get_gamma(d_detector) << std::endl;
             std::cout << "Phy: " << qdetector_cccf_get_phi(d_detector) << std::endl;
             std::cout << "Tau: " << qdetector_cccf_get_tau(d_detector) << std::endl;
+            sample = NULL;
         }
       }
 
