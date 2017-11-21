@@ -65,7 +65,8 @@ namespace gr {
       gr_complex *sample;
 
       for(unsigned int i = 0; i < noutput_items; i++){
-        sample = qdetector_cccf_execute(d_detector, in[i]);
+        sample = qdetector_cccf_execute(d_detector, in + i);
+        out[i] = in[i];
         if(sample != NULL){
             std::cout << "Detected packet!" << std::endl;
             std::cout << "Dphi: " << qdetector_cccf_get_dphi(d_detector) << std::endl;
