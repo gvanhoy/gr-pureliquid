@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<block>
+  <name>detector_cc</name>
+  <key>pureliquid_detector_cc</key>
+  <category>[pureliquid]</category>
+  <import>import pureliquid</import>
+  <make>pureliquid.detector_cc($symbols)</make>
+  <param>
+    <name>Symbols</name>
+    <key>symbols</key>
+    <type>complex_vector</type>
+  </param>
+  <sink>
+    <name>in</name>
+    <type>complex</type>
+  </sink>
+  <source>
+    <name>out</name>
+    <type>complex</type>
+  </source>
+</block>

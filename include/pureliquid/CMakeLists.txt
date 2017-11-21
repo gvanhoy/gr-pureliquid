@@ -24,5 +24,6 @@ install(FILES
     api.h
     file_source.h
     flex_tx.h
-    flex_rx.h DESTINATION include/pureliquid
+    flex_rx.h
+    detector_cc.h DESTINATION include/pureliquid
 )
