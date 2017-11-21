@@ -68,10 +68,10 @@ namespace gr {
         sample = qdetector_cccf_execute(d_detector, in[i]);
         if(sample != NULL){
             std::cout << "Detected packet!" << std::endl;
-            std::cout << "Dphi: " << qdetector_cccf_get_dphi(d_detector); << std::endl;
-            std::cout << "Gamma: " << qdetector_cccf_get_gamma(d_detector); << std::endl;
-            std::cout << "Phy: " << qdetector_cccf_get_phi(d_detector); << std::endl;
-            std::cout << "Tau: " << qdetector_cccf_get_tau(d_detector); << std::endl;
+            std::cout << "Dphi: " << qdetector_cccf_get_dphi(d_detector) << std::endl;
+            std::cout << "Gamma: " << qdetector_cccf_get_gamma(d_detector) << std::endl;
+            std::cout << "Phy: " << qdetector_cccf_get_phi(d_detector) << std::endl;
+            std::cout << "Tau: " << qdetector_cccf_get_tau(d_detector) << std::endl;
         }
       }
 
