@@ -44,7 +44,7 @@ namespace gr {
               gr::io_signature::make(1, 1, sizeof(gr_complex)),
               gr::io_signature::make(1, 1, sizeof(gr_complex)))
     {
-        d_detector = qdetector_cccf_create(symbols.data(), symbols.length());
+        d_detector = qdetector_cccf_create(symbols.data(), symbols.size());
     }
 
     /*
