@@ -8,7 +8,7 @@
   <param>
     <name>Symbols</name>
     <key>symbols</key>
-    <type>complex_vector</type>
+    <type>raw</type>
   </param>
   <sink>
     <name>in</name>
