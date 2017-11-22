@@ -62,7 +62,7 @@ namespace gr {
     {
       gr_complex *in = (gr_complex *) input_items[0];
       gr_complex *out = (gr_complex *) output_items[0];
-      gr_complex *sample;
+      void *sample;
 
       for(unsigned int i = 0; i < noutput_items; i++){
         sample = qdetector_cccf_execute(d_detector, in[i]);
