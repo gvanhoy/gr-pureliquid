@@ -33,7 +33,7 @@ namespace gr {
          qdetector_cccf d_detector;
 
      public:
-      detector_cc_impl(const std::vector<gr_complex>  &symbols);
+      detector_cc_impl(std::vector<gr_complex>  &symbols);
       ~detector_cc_impl();
 
       // Where all the action really happens
