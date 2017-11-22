@@ -30,7 +30,7 @@ namespace gr {
   namespace pureliquid {
 
     detector_cc::sptr
-    detector_cc::make(std::vector<gr_complex>  &symbols)
+    detector_cc::make(const std::vector<gr_complex>  &symbols)
     {
       return gnuradio::get_initial_sptr
         (new detector_cc_impl(symbols));
@@ -39,12 +39,13 @@ namespace gr {
     /*
      * The private constructor
      */
-    detector_cc_impl::detector_cc_impl(std::vector<gr_complex>  &symbols)
+    detector_cc_impl::detector_cc_impl(const std::vector<gr_complex> &symbols)
       : gr::sync_block("detector_cc",
               gr::io_signature::make(1, 1, sizeof(gr_complex)),
               gr::io_signature::make(1, 1, sizeof(gr_complex)))
     {
-        d_detector = qdetector_cccf_create(&symbols.front(), symbols.size());
+        std::vector<gr_complex> symbols_copy = symbols;
+        d_detector = qdetector_cccf_create(&symbols_copy.front(), symbols.size());
     }
 
     /*
