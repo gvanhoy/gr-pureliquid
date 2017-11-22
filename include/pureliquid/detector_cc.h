@@ -46,7 +46,7 @@ namespace gr {
        * class. pureliquid::detector_cc::make is the public interface for
        * creating new instances.
        */
-      static sptr make(const std::vector<gr_complex>  &symbols);
+      static sptr make(std::vector<gr_complex>  &symbols);
     };
 
   } // namespace pureliquid
