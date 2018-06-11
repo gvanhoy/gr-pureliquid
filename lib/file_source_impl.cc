@@ -96,7 +96,7 @@ namespace gr {
         if(d_repeat){
             while(true) {
                 boost::this_thread::sleep(boost::posix_time::milliseconds(d_period_ms));
-                message_port_pub(PDU_PORT_ID, d_msg);
+                message_port_pub(pmt::mp("pdus"), d_msg);
             }
         }
         else{
