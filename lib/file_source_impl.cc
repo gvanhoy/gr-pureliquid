@@ -63,7 +63,7 @@ namespace gr {
         pmt::pmt_t vec_contents = pmt::init_u8vector(buffer.size(), buffer);
         d_msg = pmt::cons(pmt::PMT_NIL, vec_contents);
 
-        message_port_register_out(PDU_PORT_ID);
+        message_port_register_out(pmt::mp("pdus"));
     }
 
     /*
@@ -100,7 +100,7 @@ namespace gr {
             }
         }
         else{
-            message_port_pub(PDU_PORT_ID, d_msg);
+            message_port_pub(pmt::mp("pdus"), d_msg);
         }
     }
 
